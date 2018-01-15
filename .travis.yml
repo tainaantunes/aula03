@@ -13,5 +13,7 @@ deploy:
       file: target/Agenda-1.0-SNAPSHOT.jar
       skip_cleanup: true
       on:
-          branch: master
-      
+            repo: renatoseixas/aula03
+            branches:    
+                  only:      
+                        - master
