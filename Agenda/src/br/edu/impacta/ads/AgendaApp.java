@@ -45,23 +45,23 @@ public class AgendaApp {
 	}
 
 	private static void inserirContato() {
-//		out.println("\nINSERCAO DE NOVO CONTATO:");
-//		String nome = lerNome();
-//		String telefone = lerTelefone();
-//		Contato c = new Contato(nome, telefone);
-//
-//		// if (contatos.contains(c)) {
-//		if (dao.existe(c)) {
-//
-//			out.println("Este contato ja esta cadastrado!");
-//		}
-//		else {
-//
-//			// contatos.add(c);
-//			dao.inserir(c);
-//
-//			out.println("Contato inserido!");
-//		}
+		out.println("\nINSERCAO DE NOVO CONTATO:");
+		String nome = lerNome();
+		String telefone = lerTelefone();
+		Contato c = new Contato(nome, telefone);
+
+		// if (contatos.contains(c)) {
+		if (dao.existe(c)) {
+
+			out.println("Este contato ja esta cadastrado!");
+		}
+		else {
+
+			// contatos.add(c);
+			dao.inserir(c);
+
+			out.println("Contato inserido!");
+		}
 	}
 
 	private static String lerNome() {
@@ -91,20 +91,20 @@ public class AgendaApp {
 	}
 
 	private static void buscarContato() {
-//		out.println("\nBUSCA DE CONTATOS:");
-//		String nome = lerNome();
-//
-//		List<Contato> resultado = dao.buscar(nome);
-//
-//
-//		if (resultado.size() == 0) {
-//			out.println("Nao ha contato com este nome!");
-//		} else {
-//			out.println("\nResultado da busca:");
-//			for (Contato c: resultado) {
-//				out.println(c);
-//			}
-//		}
+		out.println("\nBUSCA DE CONTATOS:");
+		String nome = lerNome();
+
+		List<Contato> resultado = dao.buscar(nome);
+
+
+		if (resultado.size() == 0) {
+			out.println("Nao ha contato com este nome!");
+		} else {
+			out.println("\nResultado da busca:");
+			for (Contato c: resultado) {
+				out.println(c);
+			}
+		}
 	}
 
 }

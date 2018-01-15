@@ -1,0 +1,63 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>br.edu.impacta.ads</groupId>
+  <artifactId>Agenda</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>Agenda</name>
+  <url>http://maven.apache.org</url>
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+  <build>
+	  <plugins>
+	      <plugin>
+	        <groupId>org.apache.maven.plugins</groupId>
+	        <artifactId>maven-jar-plugin</artifactId>
+	        <configuration>
+	          <archive>
+	            <manifest>
+	              <addClasspath>true</addClasspath>
+	              <mainClass>br/edu/impacta/ads/AgendaApp</mainClass>
+	            </manifest>
+	          </archive>
+	        </configuration>
+	      </plugin>
+	    </plugins>
+    <sourceDirectory>
+      ${project.basedir}/src/br/edu/impacta/ads
+    </sourceDirectory>
+    <testSourceDirectory>
+      ${project.basedir}/src/test/br/edu/impacta/ads
+    </testSourceDirectory>
+    <resources>
+          <resource>
+                 <directory>
+                   ${project.basedir}/src/br/edu/impacta/ads
+                 </directory>
+                 <excludes>
+					<exclude>**/*.java</exclude>
+				 </excludes>
+          </resource>
+    </resources>
+    <testResources>
+          <testResource>
+                 <directory>
+                   ${project.basedir}test/src/br/edu/impacta/ads
+                 </directory>
+          </testResource>
+    </testResources>
+
+</build>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.8.2</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>
