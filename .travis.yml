@@ -12,4 +12,6 @@ deploy:
       api_key: $GH_TOKEN
       file: target/Agenda-1.0-SNAPSHOT.jar
       skip_cleanup: true
+      on:
+          branch: master
       
