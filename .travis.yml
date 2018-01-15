@@ -9,7 +9,6 @@ before_deploy:
       - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
 deploy:
       provider: releases
-      api_key: "4b8279c69ef8a8c911c0695473a180499090f071"
+      api_key: "efa8c881073d70a1ffc7b266fdf85ec9b5c137cc"
       file: "target/Agenda-1.0-SNAPSHOT.jar"
       skip_cleanup: true
-
