@@ -2,3 +2,14 @@ language: java
 sudo: false
 before_script: cd Agenda
 script: mvn package
+before_deploy:
+      # Set up git user name and tag this commit
+      - git config --local user.name "renatoseixas"
+      - git config --local user.email "renato.elric@gmail.com"
+      - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
+deploy:
+      provider: releases
+      api_key: "4b8279c69ef8a8c911c0695473a180499090f071"
+      file: "target/Agenda-1.0-SNAPSHOT.jar"
+      skip_cleanup: true
+
