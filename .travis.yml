@@ -10,5 +10,6 @@ before_deploy:
 deploy:
       provider: releases
       api_key: $GH_TOKEN
-      file: "target/Agenda-1.0-SNAPSHOT.jar"
+      file: target/Agenda-1.0-SNAPSHOT.jar
       skip_cleanup: true
+      
