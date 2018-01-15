@@ -10,6 +10,6 @@ before_deploy:
 deploy:
       provider: releases
       api_key: 
-            secure: efa8c881073d70a1ffc7b266fdf85ec9b5c137cc
+            secure: ${GH_TOKEN}
       file: "target/Agenda-1.0-SNAPSHOT.jar"
       skip_cleanup: true
