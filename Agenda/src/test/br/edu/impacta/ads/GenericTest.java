@@ -1,6 +1,9 @@
 package test.br.edu.impacta.ads;
 
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
+
+import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -8,20 +11,14 @@ import org.junit.Test;
 import br.edu.impacta.ads.Contato;
 import br.edu.impacta.ads.ContatoDaoArquivo;
 
-public class ContatoTest {
+public class GenericTest {
 
 	ContatoDaoArquivo cdao;
-	Contato contato;
-
-	@Before
-	public void setData(){
-		cdao = new ContatoDaoArquivo("contatos.txt");
-		contato = new Contato("Renato", "123");
-	}
 
 	@Test
 	public void testTest() {
-		cdao.inserir(contato);
-		assertTrue("O contato não foi adicionado.", cdao.existe(contato));
+		ContatoDaoArquivo cdao = new ContatoDaoArquivo("contatos.txt");
+		List <Contato> lista = cdao.lerTodos();
+		assertNotNull("Não existe um arquivo de dados.", lista);
 	}
 }
