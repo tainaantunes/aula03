@@ -27,8 +27,10 @@ public class ContatoDaoArquivo implements IContatoDao {
 			fr.close();
 		} catch (FileNotFoundException e) {
 			System.out.println("Arquivo nao encontrado! Iniciando uma lista de contatos vazia!");
+			return null;
 		} catch (IOException e) {
 			System.out.println("Erro de leitura!");
+			return null;
 		}
 		return result;
 	}
