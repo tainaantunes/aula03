@@ -17,7 +17,7 @@ public class GenericTest {
 
 	@Test
 	public void testTest() {
-		ContatoDaoArquivo cdao = new ContatoDaoArquivo("contastos.txt");
+		ContatoDaoArquivo cdao = new ContatoDaoArquivo("contatos.txt");
 		List <Contato> lista = cdao.lerTodos();
 		assertNotNull("Não existe um arquivo de dados.", lista);
 	}
